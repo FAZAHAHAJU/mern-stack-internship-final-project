@@ -85,7 +85,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto mt-6 px-2 space-y-8 text-left">
+    <div className="max-w-6xl mx-auto mt-6 px-4 sm:px-6 space-y-8 text-left">
       {/* Header Section */}
       <div>
         <h1 className="text-3xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight mb-2">
@@ -290,7 +290,7 @@ export default function Dashboard() {
           <div>
             <h2 className="text-lg font-bold text-slate-855 dark:text-slate-100 mb-1 flex items-center gap-2">
               ⏰ Due Today Summary
-              <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-amber-105 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
+              <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
                 {tasksDueToday.length} {tasksDueToday.length === 1 ? 'task' : 'tasks'}
               </span>
             </h2>
@@ -319,9 +319,9 @@ export default function Dashboard() {
                           {task.category || 'General'}
                         </span>
                         <span className={`text-[9px] px-1.5 py-0.2 rounded-full font-bold uppercase ${
-                          task.priority === 'high' ? 'bg-red-105 text-red-800 dark:bg-red-950/60 dark:text-red-400' :
-                          task.priority === 'medium' ? 'bg-amber-105 text-amber-850 dark:bg-amber-950/60 dark:text-amber-400' :
-                          'bg-emerald-100 text-emerald-805 dark:bg-emerald-950/60 dark:text-emerald-405'
+                          task.priority === 'high' ? 'bg-red-100 text-red-800 dark:bg-red-950/60 dark:text-red-400' :
+                          task.priority === 'medium' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-400' :
+                          'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-405'
                         }`}>
                           {task.priority}
                         </span>

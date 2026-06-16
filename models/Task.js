@@ -21,36 +21,31 @@ const TaskSchema = new mongoose.Schema({
     enum: ['low', 'medium', 'high'],
     default: 'medium'
   },
+  dueDate: {
+    type: Date
+  },
   category: {
     type: String,
+    enum: ['General', 'Personal', 'Work', 'College'],
     default: 'General'
   },
   isPinned: {
     type: Boolean,
     default: false
   },
-  subtasks: [{
-    title: {
-      type: String,
-      required: true
-    },
-    completed: {
-      type: Boolean,
-      default: false
+  subtasks: [
+    {
+      title: { type: String, required: true },
+      completed: { type: Boolean, default: false }
     }
-  }],
+  ],
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
-  },
-  dueDate: {
-    type: Date
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('Task', TaskSchema);

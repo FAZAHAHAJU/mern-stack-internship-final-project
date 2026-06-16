@@ -333,7 +333,7 @@ export default function Tasks() {
       case 'college':
         return 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-900';
       case 'personal':
-        return 'bg-pink-50 text-pink-705 border-pink-200 dark:bg-pink-950/40 dark:text-pink-300 dark:border-pink-900';
+        return 'bg-pink-50 text-pink-700 border-pink-200 dark:bg-pink-950/40 dark:text-pink-300 dark:border-pink-900';
       default:
         return 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800';
     }
@@ -392,7 +392,7 @@ export default function Tasks() {
   });
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 text-left">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-4 sm:px-6 text-left">
       
       {/* COLUMN 1: CONTROL PANEL & ACCENT THEME & DATA BACKUP */}
       <div className="space-y-6">
@@ -847,7 +847,7 @@ export default function Tasks() {
                     /* === CARD STANDARD DISPLAY VIEW === */
                     <div className="flex flex-col justify-between h-full space-y-4">
                       <div>
-                        <div className="flex justify-between items-start mb-2">
+                        <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2 mb-2">
                           <div className="flex items-center gap-2">
                             {/* Pin / Star Toggle Icon */}
                             <button
@@ -875,7 +875,7 @@ export default function Tasks() {
                             </h3>
                           </div>
                           
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 self-start sm:self-auto">
                             {/* Stylish Category Pill Badge */}
                             <span className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase border ${getCategoryStyle(task.category)}`}>
                               {task.category || 'General'}
@@ -886,8 +886,8 @@ export default function Tasks() {
                               task.priority === 'high' 
                                 ? 'bg-red-100 text-red-800 border-red-200 dark:bg-red-950/60 dark:text-red-300 dark:border-red-900' 
                                 : task.priority === 'medium' 
-                                ? 'bg-amber-105 text-amber-800 border-amber-200 dark:bg-amber-955/60 dark:text-amber-300 dark:border-amber-900' 
-                                : 'bg-emerald-100 text-emerald-805 border-emerald-205 dark:bg-emerald-950/60 dark:text-emerald-305 dark:border-emerald-900'
+                                ? 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-900' 
+                                : 'bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-900'
                             }`}>
                               {task.priority}
                             </span>

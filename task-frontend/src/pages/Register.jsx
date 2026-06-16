@@ -28,7 +28,7 @@ export default function Register() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-12 p-6 bg-white dark:bg-slate-800/40 dark:backdrop-blur-sm rounded-2xl shadow-md border border-slate-200 dark:border-slate-800 text-left">
+    <div className="w-full max-w-md mx-auto mt-12 p-4 sm:p-6 bg-white dark:bg-slate-800/40 dark:backdrop-blur-sm rounded-2xl shadow-md border border-slate-200 dark:border-slate-800 text-left">
       <h2 className="text-2xl font-bold text-center mb-6 text-slate-800 dark:text-slate-100">Create your Account</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
